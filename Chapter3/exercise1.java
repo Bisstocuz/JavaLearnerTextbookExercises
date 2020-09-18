@@ -36,7 +36,7 @@ class FibonacciSequence {
             else
                 return getNumberValue(n - 1) + getNumberValue(n - 2);
         } else {
-            System.out.println("ERROR: Number cannot be negative.");
+            System.out.println("ERROR: Number cannot be zero or negative.");
             return -1;
         }
     }
