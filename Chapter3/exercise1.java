@@ -1,4 +1,4 @@
-package Chapter3and4;
+package Chapter3;
 
 class Student {
     private String name;
@@ -19,7 +19,7 @@ class Student {
     }
 
     public void getValue() {
-        System.out.println("name is " + this.name + " and score is " + this.score + ".");
+        System.out.println("Name is " + this.name + " and score is " + this.score + ".");
     }
 
 }
