@@ -24,6 +24,10 @@ class Undergraduate extends Student {
         this.degree = degree;
     }
 
+    public void changeDegree(String degree) {
+        this.degree = degree;
+    }
+
     public void show() {
         System.out.println("Name is " + super.name + " and age is " + super.age + " with degree " + this.degree + ".");
     }
@@ -32,9 +36,11 @@ class Undergraduate extends Student {
 public class exercise2 {
     public static void main(String[] args) {
         Student stu = new Student("Scot", 18);
-        Undergraduate underStu = new Undergraduate("Carl", 19, "Information Security");
+        Undergraduate underStu = new Undergraduate("Carl", 19, "Computer Science and Technology");
 
         stu.show();
+        underStu.show();
+        underStu.changeDegree("Information Security");
         underStu.show();
     }
 }
