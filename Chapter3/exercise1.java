@@ -28,12 +28,17 @@ class Student {
 class FibonacciSequence {
     // 递归实现
     public int getNumberValue(int n) {
-        if (n == 1)
-            return 0;
-        else if (n == 2)
-            return 1;
-        else
-            return getNumberValue(n - 1) + getNumberValue(n - 2);
+        if (n > 0) {    // 鲁棒性增强
+            if (n == 1)
+                return 0;
+            else if (n == 2)
+                return 1;
+            else
+                return getNumberValue(n - 1) + getNumberValue(n - 2);
+        } else {
+            System.out.println("ERROR: Number cannot be negative.");
+            return -1;
+        }
     }
 }
 
