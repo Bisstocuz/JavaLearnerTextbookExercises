@@ -1,7 +1,5 @@
 package Chapter4;
 
-//yujunyang is s b
-
 class Student {
     // 姓名与年龄
     protected String name;
