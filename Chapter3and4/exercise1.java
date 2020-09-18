@@ -24,7 +24,9 @@ class Student {
 
 }
 
+// 斐波那契数列类
 class FibonacciSequence {
+    // 递归实现
     public int getNumberValue(int n) {
         if (n == 1)
             return 0;
