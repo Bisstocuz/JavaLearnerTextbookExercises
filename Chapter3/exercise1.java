@@ -18,10 +18,17 @@ class Student {
         this.score = score;
     }
 
-    public void getValue() {
-        System.out.println("Name is " + this.name + " and score is " + this.score + ".");
+    public String getName() {
+        return this.name;
     }
 
+    public int getScore() {
+        return this.score;
+    }
+
+    public void getValue() {
+        System.out.println("Name is " + getName() + " and score is " + getScore() + ".");
+    }
 }
 
 // 斐波那契数列类
