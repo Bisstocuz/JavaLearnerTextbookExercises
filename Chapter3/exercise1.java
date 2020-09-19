@@ -5,7 +5,8 @@ class Student {
     private int score;
 
     Student() {
-
+        this.name = null;
+        this.score = -1;
     }
 
     Student(String name, int score) {
@@ -19,10 +20,14 @@ class Student {
     }
 
     public String getName() {
+        if (this.name == null)
+            System.out.println("ERROR: Variable Name is not initialized.");
         return this.name;
     }
 
     public int getScore() {
+        if (this.score == -1)
+            System.out.println("ERROR: Variable Score is not initialized.");
         return this.score;
     }
 
