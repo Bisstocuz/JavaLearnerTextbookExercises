@@ -15,6 +15,7 @@ public class exercise6 {
         set.put(2, "John");
 
         Set<Integer> keys = set.keySet();
+        // 从此处开始可使用 for 进行迭代，无须手动创建迭代器
         Iterator<Integer> it = keys.iterator();
         while (it.hasNext()) {
             Integer key = it.next();
