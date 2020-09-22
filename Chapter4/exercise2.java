@@ -10,8 +10,16 @@ class Student {
         this.age = age;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
     public void show() {
-        System.out.println("Name is " + this.name + " and age is " + this.age + ".");
+        System.out.println("Name is " + getName() + " and age is " + getAge() + ".");
     }
 }
 
@@ -28,8 +36,12 @@ class Undergraduate extends Student {
         this.degree = degree;
     }
 
+    public String getDegree() {
+        return this.degree;
+    }
+
     public void show() {
-        System.out.println("Name is " + super.name + " and age is " + super.age + " with degree " + this.degree + ".");
+        System.out.println("Name is " + super.getName() + " and age is " + super.getAge() + " with degree " + getDegree() + ".");
     }
 }
 
