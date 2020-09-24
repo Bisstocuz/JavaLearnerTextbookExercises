@@ -48,7 +48,7 @@ class Timer {
 
 // 密码输入小游戏类
 class PassGame {
-    private BufferedReader in;
+    private final BufferedReader in;
 
     PassGame() {
         this.in = new BufferedReader(new InputStreamReader(System.in));
