@@ -1,4 +1,4 @@
-package Chapter8;
+package Chapter8.test1;
 
 import javax.swing.*;
 import java.awt.*;
