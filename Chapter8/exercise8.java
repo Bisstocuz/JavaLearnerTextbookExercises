@@ -95,7 +95,6 @@ class MouseOperation implements MouseListener {
     }
 }
 
-
 public class exercise8 {
     public static void main(String[] args) {
         CommonWindow window = new CommonWindow();
