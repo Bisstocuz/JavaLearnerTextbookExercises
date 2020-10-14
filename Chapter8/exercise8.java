@@ -30,9 +30,16 @@ class CommonWindow {
         this.window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);     // 设置关闭窗口默认操作：退出程序
     }
 
-    // 向窗口添加鼠标监听器
-    public void addMouseListener(MouseListener listener) {
-        this.window.addMouseListener(listener);
+    // 向窗口添加监听器
+    public void addListener(Object listener) {
+        if (MouseListener.class.isAssignableFrom(listener.getClass()))  // 判断传入的类是否继承自某接口（下同）
+            this.window.addMouseListener((MouseListener) listener);     // 向窗口添加指定类型监听器（下同）
+        else if (KeyListener.class.isAssignableFrom(listener.getClass()))
+            this.window.addKeyListener((KeyListener) listener);
+        else if (WindowListener.class.isAssignableFrom(listener.getClass()))
+            this.window.addWindowListener((WindowListener) listener);
+        else
+            System.out.println("This Class cannot be supported.");
     }
 
     // 添加布局
@@ -95,8 +102,8 @@ public class exercise8 {
         window.setTitle("右键窗口获取鼠标坐标");
         window.setLayout(new BorderLayout());
         JLabel label = new JLabel("Default Text", JLabel.CENTER);   // 新建标签
-        window.addLabel(label, BorderLayout.PAGE_START);                 // 标签添加到窗口
-        window.addMouseListener(new MouseOperation(label));              // 添加侦听器
-        window.initialize(500, 300);        // 窗口初始化
+        window.addLabel(label, BorderLayout.PAGE_START);                 // 标签添加到窗口（PAGE_START）
+        window.addListener(new MouseOperation(label));                   // 添加侦听器
+        window.initialize(600, 400);        // 窗口初始化
     }
 }
